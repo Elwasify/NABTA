@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-navy-950: #153b4a;
+  --color-navy-900: #19485a;
+  --color-navy-800: #2e6876;
+  --color-navy-700: #528798;
+
+  --color-forest-950: #25473d;
+  --color-forest-900: #3d6555;
+  --color-forest-800: #59806c;
+  --color-forest-700: #587b64;
+  --color-forest-300: #c2d9c5;
+
+  --color-mist-50: #f6faf6;
+  --color-mist-100: #edf4ed;
+  --color-mist-200: #dfeae0;
+  --color-mist-300: #c8dcca;
+
+  --color-surface-base: #ffffff;
+  --color-surface-alt: #f1f7f1;
+  --color-surface-dark: #153b4a;
+
+  --color-sky-soft: #e5f0e9;
+  --color-paper: var(--color-surface-base);
+  --color-stone-soft: #e5f0e9;
+  --color-ink: #203631;
+  --color-ink-soft: #60736c;
+  --color-line: #e0e8e0;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+.surface {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.surface-content {
+  position: relative;
+  z-index: 1;
+}
+
+.surface-intro,
+.surface-publications,
+.surface-profile {
+  background-color: var(--color-surface-base);
+}
+
+.surface-fields,
+.surface-team,
+.surface-presenters,
+.surface-conference,
+.discipline-strip {
+  background-color: var(--color-surface-alt);
+}
+
+.surface-cta,
+.site-footer {
+  background-color: var(--color-surface-dark);
+}
+
+.surface-cta {
+  background:
+    radial-gradient(ellipse at 12% 0%, rgb(112 165 126 / 20%), transparent 38%),
+    radial-gradient(ellipse at 100% 100%, rgb(69 133 145 / 24%), transparent 42%),
+    linear-gradient(
+      120deg,
+      var(--color-surface-dark),
+      var(--color-navy-900) 56%,
+      var(--color-surface-dark)
+    );
+}
+
+.surface-cta::after {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  content: "";
+  opacity: 0.48;
+  background:
+    radial-gradient(ellipse 34px 92px at 50% 50%, transparent 62%, rgb(237 244 237 / 16%) 63%, transparent 66%),
+    radial-gradient(ellipse 34px 92px at 50% 50%, transparent 62%, rgb(237 244 237 / 12%) 63%, transparent 66%);
+  background-size: 138px 138px;
+  background-position: 0 0, 69px 69px;
+  mask-image: linear-gradient(115deg, #000, transparent 76%);
+}
+
+.hero-stage {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: var(--color-surface-dark);
+}
+
+.hero-overlay {
+  background:
+    radial-gradient(ellipse at 78% 20%, rgb(196 221 190 / 17%), transparent 38%),
+    linear-gradient(100deg, rgb(21 59 74 / 96%), rgb(25 72 90 / 82%) 54%, rgb(25 72 90 / 42%));
+}
+
+.hero-overlay::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  opacity: 0.12;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.32'/%3E%3C/svg%3E");
+}
+
+html[dir="rtl"] .hero-overlay {
+  background:
+    radial-gradient(ellipse at 22% 20%, rgb(196 221 190 / 17%), transparent 38%),
+    linear-gradient(260deg, rgb(21 59 74 / 96%), rgb(25 72 90 / 82%) 54%, rgb(25 72 90 / 42%));
+}
+
+.site-footer {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-top: 1px solid rgb(237 244 237 / 16%);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+body {
+  margin: 0;
+  overflow-x: clip;
+  background-color: var(--color-surface-base);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-forest-700);
+  outline-offset: 3px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+html[lang="ar"] body,
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3,
+html[lang="ar"] h4,
+html[lang="ar"] .font-display,
+html[lang="ar"] .font-body {
+  font-family: "Cairo", system-ui, sans-serif;
+}
+
+html[lang="ar"] [class*="tracking-"] {
+  letter-spacing: normal;
+}
+
+html.has-scroll-reveal [data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  transition:
+    opacity 650ms ease,
+    transform 650ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+html.has-scroll-reveal [data-reveal].is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+html.has-scroll-reveal [data-reveal="stagger"] > * {
+  opacity: 0;
+  transform: translate3d(0, 16px, 0);
+  transition:
+    opacity 500ms ease,
+    transform 500ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+html.has-scroll-reveal [data-reveal="stagger"].is-visible > * {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+html.has-scroll-reveal [data-reveal="stagger"].is-visible > :nth-child(2) {
+  transition-delay: 65ms;
+}
+
+html.has-scroll-reveal [data-reveal="stagger"].is-visible > :nth-child(3) {
+  transition-delay: 130ms;
+}
+
+html.has-scroll-reveal [data-reveal="stagger"].is-visible > :nth-child(4) {
+  transition-delay: 195ms;
+}
+
+html.has-scroll-reveal [data-reveal="stagger"].is-visible > :nth-child(5) {
+  transition-delay: 260ms;
+}
+
+html.has-scroll-reveal [data-reveal="stagger"].is-visible > :nth-child(6) {
+  transition-delay: 325ms;
+}
+
+html.has-scroll-reveal [data-reveal="stagger"].is-visible > :nth-child(7) {
+  transition-delay: 390ms;
+}
+
+html.has-scroll-reveal [data-reveal="stagger"].is-visible > :nth-child(8) {
+  transition-delay: 455ms;
+}
+
+html.has-scroll-reveal [data-reveal="stagger"].is-visible > :nth-child(9) {
+  transition-delay: 520ms;
+}
+
+html.has-scroll-reveal [data-reveal="stagger"].is-visible > :nth-child(10) {
+  transition-delay: 585ms;
+}
+
+@media (hover: hover) {
+  .surface-content article,
+  .surface-content figure > div {
+    transition:
+      border-color 220ms ease,
+      box-shadow 220ms ease,
+      transform 220ms ease;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html.has-scroll-reveal [data-reveal],
+  html.has-scroll-reveal [data-reveal="stagger"] > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .group:hover img {
+    transform: none;
+  }
+}

@@ -1,26 +1,24 @@
-# 🌿 Phyto Nova
+# NABTA
 
-**A bilingual academic research website exploring plant tissue culture and its potential role in anticancer drug discovery.**
+**A bilingual academic website for NABTA, a bio-based soil conditioner designed for sandy soils.**
 
-🔗 [phyto-nova.vercel.app](https://phyto-nova.vercel.app)
-
-Phyto Nova presents research themes, scientific references, project resources, and the academic team behind the project. The website is available in English and Arabic, with right-to-left (RTL) layout support for Arabic.
+NABTA presents the project's overview, soil-related research areas, formulation ingredients, package options, references, supervisor, and team. The website is available in English and Arabic with right-to-left (RTL) layout support.
 
 ## Features
 
 - 🌐 Bilingual interface (English / Arabic) with full RTL support
-- 🔬 Research themes overview
+- 🔬 Soil and research themes overview
 - 📚 Selected scientific publications
 - 🗂️ Project resources
 - 👥 Supervisor and team information
-- 🔭 Research outlook
+- 🌱 Product ingredient and package information
 
 ## Research topics
 
-- Nano-elicitation
-- Secondary-metabolite production
-- Bioreactor scale-up
-- Metabolomics
+- Soil water retention
+- Soil structure and aggregation
+- Organic matter and nutrient enrichment
+- Microbial biopolymer soil conditioning
 
 ## Getting started
 
@@ -31,8 +29,8 @@ Phyto Nova presents research themes, scientific references, project resources, a
 ### Install and run locally
 
 ```bash
-git clone https://github.com/Elwasify/phyto-nova.git
-cd phyto-nova
+git clone https://github.com/Elwasify/NABTA.git
+cd NABTA
 npm install
 npm run dev
 ```

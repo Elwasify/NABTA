@@ -48,7 +48,7 @@ const StyledWrapper = styled.div`
     width: 100%;
     aspect-ratio: 3 / 4;
     background: #ffffff;
-    border: 1px solid var(--color-line, #e3e8ea);
+    border: 1px solid var(--color-line, #dfe6d9);
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 4px 14px rgba(31, 78, 107, 0.06);
@@ -77,7 +77,9 @@ const StyledWrapper = styled.div`
     align-items: center;
     opacity: 0;
     transform: translateY(12px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s ease;
   }
 
   .card.is-expanded .content {
@@ -99,7 +101,7 @@ const StyledWrapper = styled.div`
   .content .title span {
     display: block;
     margin-top: 6px;
-    color: var(--color-forest-800, #4a7c6b);
+    color: var(--color-forest-800, #466545);
     font-weight: 500;
     font-size: 0.75em;
     letter-spacing: 0.15em;
@@ -127,7 +129,7 @@ const StyledWrapper = styled.div`
 
   .sci li a {
     text-decoration: none;
-    color: var(--color-forest-800, #4a7c6b);
+    color: var(--color-forest-800, #466545);
     background: #eef3f2;
     width: 40px;
     height: 40px;
@@ -135,14 +137,14 @@ const StyledWrapper = styled.div`
     justify-content: center;
     align-items: center;
     border-radius: 9999px;
-    border: 1px solid var(--color-line, #e3e8ea);
+    border: 1px solid var(--color-line, #dfe6d9);
     transition: 0.4s;
   }
 
   .sci li a:hover,
   .sci li a:focus-visible {
     color: #ffffff;
-    background: var(--color-navy-900, #1f4e6b);
+    background: var(--color-navy-900, #1e4b37);
   }
 
   @media (hover: hover) {

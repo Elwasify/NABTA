@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { LanguageContext } from "./LanguageContext";
 import { translations } from "../i18n/translations";
 
-const STORAGE_KEY = "phyto-nova-language";
+const STORAGE_KEY = "nabta-language";
 
 function getInitialLanguage() {
   try {

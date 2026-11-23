@@ -1,36 +1,39 @@
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --color-navy-950: #153b4a;
-  --color-navy-900: #19485a;
-  --color-navy-800: #2e6876;
-  --color-navy-700: #528798;
+  --color-navy-950: #15332a;
+  --color-navy-900: #1e4b37;
+  --color-navy-800: #336747;
+  --color-navy-700: #64895a;
 
-  --color-forest-950: #25473d;
-  --color-forest-900: #3d6555;
-  --color-forest-800: #59806c;
-  --color-forest-700: #587b64;
-  --color-forest-300: #c2d9c5;
+  --color-forest-950: #1f4431;
+  --color-forest-900: #355b3d;
+  --color-forest-800: #466545;
+  --color-forest-700: #547646;
+  --color-forest-300: #c7d9b1;
+  --color-nabta-lime: #b6e75f;
+  --color-nabta-lime-soft: #eef7d9;
 
-  --color-mist-50: #f6faf6;
-  --color-mist-100: #edf4ed;
-  --color-mist-200: #dfeae0;
-  --color-mist-300: #c8dcca;
+  --color-mist-50: #f8f9f4;
+  --color-mist-100: #eef2e7;
+  --color-mist-200: #dce6d2;
+  --color-mist-300: #c6d5b9;
 
-  --color-surface-base: #ffffff;
-  --color-surface-alt: #f1f7f1;
-  --color-surface-dark: #153b4a;
+  --color-surface-base: #fcfcf8;
+  --color-surface-alt: #f3f6ec;
+  --color-surface-dark: #17392b;
 
-  --color-sky-soft: #e5f0e9;
+  --color-sky-soft: #e4edd8;
   --color-paper: var(--color-surface-base);
-  --color-stone-soft: #e5f0e9;
-  --color-ink: #203631;
-  --color-ink-soft: #60736c;
-  --color-line: #e0e8e0;
+  --color-stone-soft: #e4edd8;
+  --color-ink: #27372b;
+  --color-ink-soft: #667263;
+  --color-line: #dfe6d9;
 
-  --font-display: "Playfair Display", Georgia, serif;
-  --font-body: "Inter", system-ui, sans-serif;
+  --font-display: "DM Sans", system-ui, sans-serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --font-accent: "Libre Caslon Display", Georgia, serif;
 }
 
 .surface {
@@ -44,9 +47,94 @@
   z-index: 1;
 }
 
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 100%;
+  padding: 0.42rem 0.75rem;
+  border: 1px solid rgb(84 118 70 / 18%);
+  border-radius: 9999px;
+  background: var(--color-nabta-lime-soft);
+  color: var(--color-forest-900);
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.1em;
+}
+
+.section-kicker::before {
+  width: 0.4rem;
+  height: 0.4rem;
+  flex: 0 0 auto;
+  border-radius: 9999px;
+  background: var(--color-forest-700);
+  content: "";
+}
+
+.section-kicker-light {
+  border-color: rgb(255 255 255 / 20%);
+  background: rgb(255 255 255 / 10%);
+  color: var(--color-nabta-lime);
+}
+
+.section-kicker-light::before {
+  background: var(--color-nabta-lime);
+}
+
+.surface-content h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.surface-content h3 {
+  letter-spacing: -0.02em;
+}
+
+/* Keep the hero and fixed navigation palette intact; give the content below it
+   a clearer, brighter NABTA palette with consistent contrast. */
+main > section:not(:first-child) {
+  --color-navy-950: #102b1f;
+  --color-navy-900: #173d2b;
+  --color-navy-800: #2e6039;
+  --color-navy-700: #63894b;
+
+  --color-forest-950: #102b1f;
+  --color-forest-900: #1a482d;
+  --color-forest-800: #2d623b;
+  --color-forest-700: #56823f;
+  --color-forest-300: #b8d2b2;
+  --color-nabta-lime: #a9c98f;
+  --color-nabta-lime-soft: #edf4e7;
+
+  --color-mist-50: #fcfdf9;
+  --color-mist-100: #f0f4e8;
+  --color-mist-200: #e1e9d7;
+  --color-mist-300: #cbd9bc;
+
+  --color-surface-base: #ffffff;
+  --color-surface-alt: #f1f5ea;
+  --color-surface-dark: #143a29;
+  --color-ink: #26382d;
+  --color-ink-soft: #647267;
+  --color-line: #dce5d4;
+}
+
+.surface-content article {
+  border-color: var(--color-line);
+  box-shadow: 0 10px 30px rgb(31 68 49 / 5%);
+}
+
+.surface-content article:hover {
+  box-shadow: 0 16px 36px rgb(31 68 49 / 10%);
+}
+
 .surface-intro,
 .surface-publications,
-.surface-profile {
+.surface-profile,
+.surface-ingredients,
+.surface-support {
   background-color: var(--color-surface-base);
 }
 
@@ -58,21 +146,67 @@
   background-color: var(--color-surface-alt);
 }
 
-.surface-cta,
-.site-footer {
-  background-color: var(--color-surface-dark);
+.surface-rating {
+  background-color: var(--color-surface-alt);
 }
 
-.surface-cta {
+main > section.surface-cta {
+  --color-forest-300: #b8d2b2;
+  --color-nabta-lime: #b8d2b2;
+  --color-nabta-lime-soft: #eaf2e6;
+
   background:
-    radial-gradient(ellipse at 12% 0%, rgb(112 165 126 / 20%), transparent 38%),
-    radial-gradient(ellipse at 100% 100%, rgb(69 133 145 / 24%), transparent 42%),
-    linear-gradient(
-      120deg,
-      var(--color-surface-dark),
-      var(--color-navy-900) 56%,
-      var(--color-surface-dark)
-    );
+    linear-gradient(110deg, rgb(10 32 21 / 86%), rgb(13 39 25 / 70%)),
+    url("/nabta-footer-bg.webp") center 65% / cover no-repeat;
+}
+
+main > section.surface-order {
+  --color-nabta-lime: #b8d2b2;
+  --color-nabta-lime-soft: #eaf2e6;
+  --color-forest-300: #b8d2b2;
+
+  color: var(--color-ink);
+  background: #fafbf8;
+}
+
+.site-footer {
+  color: white;
+  border-top: 1px solid rgb(255 255 255 / 20%);
+  background:
+    linear-gradient(110deg, rgb(10 32 21 / 86%), rgb(13 39 25 / 70%)),
+    url("/nabta-footer-bg.webp") center 65% / cover no-repeat;
+}
+
+.site-footer .footer-highlight {
+  color: #c3d9bb;
+}
+
+.site-footer .footer-panel {
+  color: var(--color-ink);
+}
+
+.footer-repository-link {
+  border-color: #cadcc5;
+  background: #e8f0e4;
+  color: #245236;
+}
+
+.footer-repository-link:hover {
+  border-color: #a9c5a1;
+  background: #d9e8d4;
+  color: #173d2b;
+}
+
+.footer-repository-link:active {
+  border-color: #245236;
+  background: #245236;
+  color: white;
+  transform: scale(0.98);
+}
+
+.footer-repository-link:focus-visible {
+  outline: 2px solid #56823f;
+  outline-offset: 3px;
 }
 
 .surface-cta::after {
@@ -83,8 +217,8 @@
   content: "";
   opacity: 0.48;
   background:
-    radial-gradient(ellipse 34px 92px at 50% 50%, transparent 62%, rgb(237 244 237 / 16%) 63%, transparent 66%),
-    radial-gradient(ellipse 34px 92px at 50% 50%, transparent 62%, rgb(237 244 237 / 12%) 63%, transparent 66%);
+    radial-gradient(ellipse 34px 92px at 50% 50%, transparent 62%, rgb(221 236 221 / 16%) 63%, transparent 66%),
+    radial-gradient(ellipse 34px 92px at 50% 50%, transparent 62%, rgb(221 236 221 / 12%) 63%, transparent 66%);
   background-size: 138px 138px;
   background-position: 0 0, 69px 69px;
   mask-image: linear-gradient(115deg, #000, transparent 76%);
@@ -97,10 +231,40 @@
   background-color: var(--color-surface-dark);
 }
 
+.hero-field {
+  min-height: max(620px, 100svh);
+}
+
+.hero-field img {
+  object-position: center 56%;
+}
+
+@media (max-width: 639px) {
+  .hero-field {
+    min-height: max(680px, 100svh);
+  }
+
+  .hero-field img {
+    object-position: 62% center;
+  }
+
+  .hero-content {
+    min-height: max(680px, 100svh);
+  }
+}
+
+.hero-content {
+  min-height: max(620px, 100svh);
+}
+
+.hero-copy {
+  margin-top: 10svh;
+}
+
 .hero-overlay {
   background:
-    radial-gradient(ellipse at 78% 20%, rgb(196 221 190 / 17%), transparent 38%),
-    linear-gradient(100deg, rgb(21 59 74 / 96%), rgb(25 72 90 / 82%) 54%, rgb(25 72 90 / 42%));
+    linear-gradient(0deg, rgb(15 34 25 / 60%), transparent 36%),
+    linear-gradient(90deg, rgb(14 35 26 / 73%), rgb(14 35 26 / 46%) 48%, rgb(14 35 26 / 14%));
 }
 
 .hero-overlay::after {
@@ -114,15 +278,20 @@
 
 html[dir="rtl"] .hero-overlay {
   background:
-    radial-gradient(ellipse at 22% 20%, rgb(196 221 190 / 17%), transparent 38%),
-    linear-gradient(260deg, rgb(21 59 74 / 96%), rgb(25 72 90 / 82%) 54%, rgb(25 72 90 / 42%));
+    linear-gradient(0deg, rgb(15 34 25 / 60%), transparent 36%),
+    linear-gradient(270deg, rgb(14 35 26 / 73%), rgb(14 35 26 / 46%) 48%, rgb(14 35 26 / 14%));
+}
+
+@media (max-width: 1023px) {
+  .hero-copy {
+    margin-top: 0;
+  }
 }
 
 .site-footer {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  border-top: 1px solid rgb(237 244 237 / 16%);
 }
 
 html {
@@ -175,6 +344,15 @@ html[lang="ar"] .font-body {
 }
 
 html[lang="ar"] [class*="tracking-"] {
+  letter-spacing: normal;
+}
+
+html[lang="ar"] .surface-content :is(h2, h3) {
+  letter-spacing: normal;
+}
+
+html[lang="ar"] .section-kicker {
+  font-size: 0.8rem;
   letter-spacing: normal;
 }
 

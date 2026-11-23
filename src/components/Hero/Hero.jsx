@@ -1,12 +1,11 @@
 import { Icon } from "@iconify/react";
-import heroImage from "../../assets/tissue-culture-editorial.jpg";
 import { useLanguage } from "../../context/useLanguage";
 
 const disciplineIcons = [
+  "ph:drop-duotone",
   "ph:plant-duotone",
+  "ph:leaf-duotone",
   "ph:atom-duotone",
-  "ph:flask-duotone",
-  "ph:dna-duotone",
 ];
 
 export default function Hero() {
@@ -14,71 +13,87 @@ export default function Hero() {
 
   return (
     <section id="home">
-      <div className="hero-stage">
+      <div className="hero-stage hero-field">
         <img
-          src={heroImage}
-          alt={t.hero.imageAlt}
-          className="absolute inset-0 -z-20 h-full w-full object-cover rtl:-scale-x-100"
+          src="/nabta-hero.webp"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
           fetchPriority="high"
           decoding="async"
         />
         <div className="hero-overlay absolute inset-0 -z-10" />
 
-        <div className="relative z-10 mx-auto flex min-h-[500px] max-w-7xl flex-col justify-center px-4 py-16 sm:min-h-[580px] sm:px-5 sm:py-20 lg:min-h-[640px] lg:px-8 lg:py-24">
-          <div className="max-w-3xl" data-reveal>
-            <p className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-forest-300">
+        <div className="hero-content relative z-10 mx-auto flex max-w-7xl flex-col justify-center px-5 pb-12 pt-24 sm:px-8 sm:pb-14 lg:px-10">
+          <div className="hero-copy max-w-5xl" data-reveal>
+            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-white/85 sm:text-sm">
+              <Icon
+                icon="ph:plant-duotone"
+                width={18}
+                height={18}
+                className="me-2 inline-block align-[-3px] text-nabta-lime"
+              />
               {t.hero.label}
             </p>
 
-            <h1 className="font-display text-4xl font-medium leading-[1.1] text-white sm:text-5xl lg:text-6xl">
-              {t.hero.titleStart}{" "}
-              <span className="text-sky-soft">{t.hero.titleHighlight}</span>
+            <h1 className="max-w-4xl font-body text-5xl font-medium uppercase leading-[0.98] tracking-[-0.045em] text-white sm:text-7xl lg:text-[clamp(5rem,8.4vw,8.5rem)]">
+              <span className="block">{t.hero.titleStart}</span>
+              <span className="block">{t.hero.titleHighlight}</span>
             </h1>
+          </div>
 
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg">
-              {t.hero.description}
-            </p>
-
-            <div className="mt-9 flex flex-wrap items-center gap-4">
+          <div className="hero-bottom mt-12 flex flex-col gap-8 sm:mt-16 lg:mt-auto lg:flex-row lg:items-end lg:justify-between lg:gap-12 lg:pt-16">
+            <div className="hero-actions flex flex-wrap items-center gap-3 sm:gap-4">
               <a
                 href="#about"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-navy-900 transition-colors hover:bg-mist-100 sm:w-auto sm:px-7"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-semibold text-forest-950 transition-all hover:-translate-y-0.5 hover:bg-mist-100 hover:shadow-lg sm:px-6"
               >
                 {t.hero.primaryButton}
                 <Icon
-                  icon="ph:arrow-right-bold"
-                  width={16}
-                  height={16}
-                  className="rtl:rotate-180"
+                  icon="ph:arrow-up-right-bold"
+                  width={17}
+                  height={17}
+                  className="rtl:-scale-x-100"
                 />
               </a>
               <a
-                href="#publications"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/60 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10 sm:w-auto sm:px-7"
+                href="#order"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/65 bg-white/5 px-5 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:bg-white/15 sm:px-6"
               >
-                <Icon icon="ph:book-open-duotone" width={18} height={18} />
+                <Icon icon="ph:package-duotone" width={20} height={20} />
                 {t.hero.secondaryButton}
               </a>
             </div>
 
-            <p className="mt-10 text-sm text-white/70">{t.hero.byline}</p>
+            <div className="hero-description max-w-xl lg:text-end" data-reveal>
+              <p className="text-lg leading-relaxed text-white sm:text-xl lg:text-2xl">
+                {t.hero.description}
+              </p>
+              <p className="mt-4 text-sm font-medium text-white/75 sm:text-base">
+                {t.hero.byline}
+              </p>
+            </div>
           </div>
 
-          <div className="absolute bottom-6 end-5 hidden items-center gap-2 text-[11px] font-medium uppercase tracking-[0.2em] text-white/70 sm:flex lg:end-8">
-            <Icon icon="ph:plant-duotone" width={14} height={14} />
+          <p className="hero-caption mt-9 text-[11px] font-medium uppercase tracking-[0.18em] text-white/65 lg:absolute lg:bottom-5 lg:start-10 lg:mt-0">
             {t.hero.imageCaption}
-          </div>
+          </p>
         </div>
       </div>
 
       <div className="discipline-strip border-b border-mist-200">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-x-3 gap-y-5 px-4 py-6 sm:gap-x-5 sm:gap-y-6 sm:px-5 sm:py-8 lg:grid-cols-4 lg:px-8" data-reveal="stagger">
+        <div
+          className="mx-auto grid max-w-7xl grid-cols-2 gap-x-3 gap-y-5 px-4 py-6 sm:gap-x-5 sm:gap-y-6 sm:px-5 sm:py-8 lg:grid-cols-4 lg:px-8"
+          data-reveal="stagger"
+        >
           {disciplineIcons.map((icon, index) => (
             <div
               key={icon}
-              className="flex min-w-0 items-center justify-center gap-2 text-center text-navy-900 sm:gap-3"
+              className="group flex min-w-0 items-center justify-center gap-3 text-center text-forest-900"
             >
-              <Icon icon={icon} width={24} height={24} className="shrink-0 text-navy-700 sm:h-7 sm:w-7" />
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-linear-to-br from-nabta-lime-soft to-white text-forest-900 ring-1 ring-forest-700/10 transition-transform duration-300 group-hover:scale-110 sm:h-12 sm:w-12">
+                <Icon icon={icon} width={26} height={26} />
+              </span>
               <span className="text-xs font-medium leading-snug sm:text-sm">
                 {t.hero.disciplines[index]}
               </span>

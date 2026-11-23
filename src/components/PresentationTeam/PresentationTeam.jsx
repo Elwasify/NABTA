@@ -18,7 +18,7 @@ export default function PresentationTeam() {
           <h2 className="font-display text-3xl font-medium text-navy-900 sm:text-4xl">
             {t.presentation.title}
           </h2>
-          <div className="mx-auto mt-5 h-1 w-16 rounded-full bg-linear-to-r from-forest-700 to-navy-800" />
+          <div className="mx-auto mt-5 h-1 w-16 rounded-full bg-linear-to-r from-nabta-lime to-forest-800" />
         </div>
 
         <div

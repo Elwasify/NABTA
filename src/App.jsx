@@ -6,8 +6,7 @@ import ResearchOverview from "./components/ResearchOverview";
 import ResearchAreas from "./components/ResearchAreas";
 import Publications from "./components/Publications";
 import ProjectRepository from "./components/ProjectRepository";
-import ConferenceRecognition from "./components/ConferenceRecognition";
-import Supervisor from "./components/Supervisor";
+import UnderSupervision from "./components/UnderSupervision";
 import PresentationTeam from "./components/PresentationTeam";
 import TechnicalSupport from "./components/TechnicalSupport";
 import ProjectTeam from "./components/ProjectTeam";
@@ -15,6 +14,8 @@ import Rating from "./components/Rating";
 import Footer from "./components/Footer";
 import BackToTop from "./components/BackToTop/BackToTop";
 import NotFoundPage from "./components/NotFoundPage";
+import Ingredients from "./components/Ingredients";
+import ProductOrder from "./components/ProductOrder";
 
 function HomePage() {
   useEffect(() => {
@@ -46,15 +47,16 @@ function HomePage() {
 
   return (
     <>
-      <Navbar />
+      <Navbar overlay />
       <main>
         <Hero />
         <ResearchOverview />
         <ResearchAreas />
+        <Ingredients />
+        <ProductOrder />
         <Publications />
         <ProjectRepository />
-        <ConferenceRecognition />
-        <Supervisor />
+        <UnderSupervision />
         <PresentationTeam />
         <TechnicalSupport />
         <ProjectTeam />

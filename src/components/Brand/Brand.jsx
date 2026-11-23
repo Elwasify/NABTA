@@ -1,22 +1,17 @@
-import logo from "../../assets/phyto-nova-logo.png";
+import logo from "../../assets/nabta-logo.webp";
+import navbarLogo from "../../assets/nabta-navbar-logo.webp";
 
 export default function Brand({ light = false }) {
   return (
-    <a href="/#home" className="flex shrink-0 items-center gap-2 sm:gap-3">
+    <a href="/#home" aria-label="NABTA home" className="flex shrink-0 items-center">
       <span
-        className={`flex h-10 w-10 items-center justify-center rounded-full sm:h-11 sm:w-11 ${
-          light ? "bg-white p-1.5" : ""
-        }`}
+        className="flex h-10 w-28 items-center justify-center px-1 sm:h-11 sm:w-32"
       >
         <img
-          src={logo}
-          alt="Phyto Nova"
+          src={light ? navbarLogo : logo}
+          alt="NABTA"
           className="h-full w-full object-contain"
         />
-      </span>
-      <span className="font-display text-lg font-semibold tracking-tight sm:text-xl">
-        <span className={light ? "text-white" : "text-forest-800"}>Phyto</span>
-        <span className={light ? "text-white" : "text-navy-800"}> Nova</span>
       </span>
     </a>
   );

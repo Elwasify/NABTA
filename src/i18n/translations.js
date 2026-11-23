@@ -6,93 +6,126 @@ export const translations = {
       toggleMenu: "Toggle menu",
     },
     nav: [
-      { label: "About Research", href: "#about" },
+      { label: "About NABTA", href: "#about" },
       { label: "Research Areas", href: "#research-areas" },
+      { label: "Ingredients", href: "#ingredients" },
+      { label: "The Product", href: "#order" },
+      { label: "Our Team", href: "#team" },
       { label: "Publications", href: "#publications" },
       { label: "Repository", href: "#repository" },
-      { label: "Our Team", href: "#team" },
     ],
     navbar: {
       repositoryButton: "Project Repository",
       repositoryButtonMobile: "Access Project Repository",
     },
     hero: {
-      label: "Phyto Nova · Plant Biotechnology Research",
-      titleStart: "Plant Tissue Culture for",
-      titleHighlight: "Anticancer Drug Discovery",
+      label: "NABTA · Bio-Based Soil Conditioner",
+      titleStart: "Better Soil.",
+      titleHighlight: "Better Growth.",
       description:
-        "Exploring the potential of plant biotechnology, nano-elicitation, and metabolomics to advance the discovery of bioactive compounds with potential anticancer applications.",
-      primaryButton: "Explore the Research",
-      secondaryButton: "View Publications",
-      byline: "A scientific exploration by the Phyto Nova Team",
-      imageAlt: "Plant tissue culture",
-      imageCaption: "Plant Tissue Culture · Illustrative Visual",
+        "NABTA is a tablet-form soil conditioner that combines organic, mineral, and microbial biopolymer materials to help sandy soils retain water and support healthier plant growth.",
+      primaryButton: "Explore NABTA",
+      secondaryButton: "Discover the Product",
+      byline: "A practical soil solution for more sustainable plant growth",
+      imageAlt: "NABTA soil conditioner tablets",
+      imageCaption: "NABTA · Made for Sandy Soils",
       disciplines: [
-        "Plant Biotechnology",
-        "Nano-Elicitation",
-        "Bioreactor Cultivation",
-        "Metabolomic Analysis",
+        "Water Retention",
+        "Soil Structure",
+        "Organic Nutrients",
+        "Microbial EPS",
       ],
     },
     overview: {
-      label: "The Research",
-      title: "Bridging Plant Biotechnology and Drug Discovery",
+      label: "About the Project",
+      title: "NABTA – Bio-Based Soil Conditioner Tablets",
       paragraphOne:
-        "This research explores the potential of plant tissue culture as an innovative platform for discovering and producing bioactive compounds with potential anticancer applications.",
+        "NABTA is an innovative soil conditioner in the form of compressed tablets, specially designed to improve the properties of sandy soils through an integrated combination of organic, mineral, and microbial biopolymer-based materials.",
       paragraphTwo:
-        "By integrating plant biotechnology with nanotechnology, advanced cultivation systems, and metabolomic analysis, the study examines how plant cells can be optimized to enhance the production of valuable secondary metabolites.",
+        "Its formulation aims to enhance the soil's water-holding capacity, improve soil particle aggregation and structure, and enrich the soil with organic matter and essential nutrients, helping create a more favorable environment for root development and plant growth.",
       quote:
-        "Plant Tissue Culture for Anticancer Drug Discovery: Insights into Nano-Elicitation, Secondary-Metabolite Production, Bioreactor Scale-Up, and Metabolomics",
-      imageAlt: "Plant tissue culture in the laboratory",
-      figureLabel: "01 / The potential within plant cells",
-      figureNote: "Illustrative laboratory image",
+        "NABTA tablets are designed for easy storage, transportation, and application. They are placed in the soil near plant roots and irrigated, allowing the tablets to gradually disintegrate and release their components into the surrounding soil.",
+      imageAlt: "A young seedling growing in soil",
+      figureLabel: "Better Soil, Better Water Retention",
+      figureNote: "More Sustainable Growth",
     },
     areasSection: {
-      label: "An Integrated Approach",
-      title: "Four interconnected research areas.",
+      label: "Four Integrated Research Areas",
+      title: "Four ways NABTA supports sandy soil.",
       description:
-        "From cellular responses to chemical profiles, exploring the possibilities of plant-based research.",
+        "The formulation brings together water retention, soil structure, organic nutrients, and microbial biopolymers.",
       focusLabel: "Research Focus",
     },
     areas: [
       {
-        title: "Nano-Elicitation",
+        title: "Soil Water Retention",
         description:
-          "Exploring how nanoscale elicitors can stimulate plant defense and metabolic pathways, with the potential to influence secondary-metabolite accumulation.",
+          "Supporting water retention and helping reduce drainage losses in sandy soils.",
       },
       {
-        title: "Secondary-Metabolite Production",
+        title: "Soil Structure",
         description:
-          "Examining plant-derived bioactive compounds and approaches to optimize the production of valuable secondary metabolites in cultured plant cells.",
+          "Supporting particle aggregation and stability to create a more favorable environment for root growth.",
       },
       {
-        title: "Bioreactor Scale-Up",
+        title: "Nutrients and Organic Matter",
         description:
-          "Investigating the transition from laboratory-scale cultures towards controlled, scalable cultivation systems for plant cell production.",
+          "Adding organic matter and essential nutrients to support plant growth and soil quality.",
       },
       {
-        title: "Metabolomics",
+        title: "Microbial Biopolymers",
         description:
-          "Analyzing complex chemical profiles to better understand metabolic pathways and identify potentially important bioactive molecules.",
+          "Using microbial EPS to support cohesion, particle binding, and soil stability.",
       },
     ],
+    ingredients: {
+      label: "Product Formulation",
+      title: "What goes into NABTA?",
+      description:
+        "A selected blend of organic, mineral, and microbial materials, brought together for sandy-soil applications.",
+      items: [
+        "Compost",
+        "Vermiculite",
+        "Agricultural Biochar",
+        "Bentonite",
+        "Composted Poultry Manure",
+        "Starch",
+        "Microbial EPS",
+      ],
+      details: [
+        "Adds organic matter and supports soil life around the roots.",
+        "Holds water and nutrients and releases them gradually.",
+        "Improves water-holding capacity and soil porosity.",
+        "A clay mineral that helps sandy soil hold water and bind particles.",
+        "A source of organic nutrients for plant growth.",
+        "Acts as a natural binder that holds the tablet together.",
+        "Microbial biopolymers that support particle binding and soil stability.",
+      ],
+    },
+    order: {
+      label: "The Product",
+      title: "NABTA tablets for every use",
+      description:
+        "NABTA is available in sizes for home plants and for large fields.",
+      typeLabel: "Application type",
+      sizeLabel: "Package size",
+      home: "Home plants",
+      field: "Large fields",
+      productAlt: "NABTA bio-based soil conditioner tablets",
+    },
     publicationsSection: {
       label: "The Scientific Foundation",
       title: "Research Publications & Scientific References",
       description:
-        "Explore the scientific literature informing our research perspective.",
+        "Explore the research and scientific literature that inform NABTA's approach to sandy soils.",
       reference: "Reference",
       readPublication: "Read Publication",
     },
     publicationSummaries: {
-      "nano-elicitation-plant-cell-cultures":
-        "A review of nanoparticle elicitation approaches for enhancing secondary-metabolite production in medicinal plant cell cultures.",
-      "viola-odorata-fed-batch-cultivation":
-        "Examines mathematical modeling and nutrient feeding strategies for Viola odorata plant cell cultivation in bioreactors, alongside analysis of the resulting extracts.",
-      "paclobutrazol-rice-water-deficit":
-        "Investigates physiological, biochemical, and molecular responses to paclobutrazol treatment in rice under water deficit stress.",
-      "plant-cell-tissue-organ-culture-metabolites":
-        "Reviews plant cell, tissue, and organ culture approaches for sustainable metabolite production, including bioreactor technologies and metabolomic analysis.",
+      "eps-soil-conditioning":
+        "Scientific evidence for microbial exopolysaccharides and their role in biopolymer-based materials for soil and environmental applications.",
+      "soil-water-retention":
+        "Research supporting improved soil-water behavior and microbial biopolymer applications for sustainable soil conditioning.",
     },
     errorPage: {
       eyebrow: "PAGE NOT FOUND",
@@ -112,13 +145,13 @@ export const translations = {
     supervisor: {
       label: "Academic Guidance",
       title: "Under the Supervision of",
-      name: "Prof. Dr. Said Soliman",
-      role: "Former Head of the Genetics Department\nFaculty of Agriculture, Zagazig University",
-      distinction: "Inventor of Orabi Rice",
+      name: "Prof. Dr. Sarah Fouda",
+      role: "Professor, Department of Soil Science\nFaculty of Agriculture, Zagazig University",
+      distinction: "",
     },
     presentation: {
       label: "The Presenters",
-      title: "Phyto Nova Team Presentation",
+      title: "NABTA Team Presentation",
       presentedBy: "Presented by",
       showDetails: "Show details for",
       hideDetails: "Hide details for",
@@ -130,20 +163,20 @@ export const translations = {
       role: "FRONTEND DEVELOPER",
       handle: "@Elwasify",
       name: "ENG. Abdallah Elwasify",
-      description: "Designed and developed the Phyto Nova website.",
+      description: "Designed and developed the NABTA website.",
       socialLabel: "Social",
     },
     team: {
-      label: "The People Behind the Project",
-      title: "Meet the Phyto Nova Team",
+      label: "The People Behind NABTA",
+      title: "Meet the NABTA Team",
       description:
-        "A shared curiosity. A collaborative approach. A new perspective on plant biotechnology.",
+        "A collaborative team working to improve soil quality and support sustainable growth.",
     },
     rating: {
       label: "Join the Conversation",
       title: "Rate the Idea & Share Your Suggestions",
       description:
-        "Your scientific feedback helps us improve Phyto Nova. Rate the research idea and tell us what you think.",
+        "Your feedback helps us improve NABTA. Rate the project and share your suggestions.",
       ratingLabel: "How would you rate the research idea?",
       typeLabel: "Type of feedback",
       types: {
@@ -156,18 +189,24 @@ export const translations = {
       emailPlaceholder: "Your email (optional, if you'd like a reply)",
       submit: "Send",
       sending: "Sending...",
-      thanks: "Thank you! Your input is valuable to the Phyto Nova team. 🌿",
+      thanks: "Thank you! Your input is valuable to the NABTA team. 🌿",
       error: "Something went wrong, please try again.",
       star: "stars",
       submitAnother: "Submit another response",
     },
     footer: {
+      taglineStart: "Better soil,",
+      taglineHighlight: "stronger growth",
       description:
-        "Exploring the intersection of plant biotechnology and drug discovery through scientific inquiry and collaboration.",
+        "A bio-based soil conditioner designed to improve sandy soils and support sustainable plant growth.",
       repository: "Project Repository",
+      quickLinks: "Quick links",
+      contactUs: "Contact",
+      followUs: "Follow us",
+      location: "Faculty of Agriculture, Zagazig University",
       backToTop: "Back to top",
       socialAccountPrefix: "Mohamed Fouad on",
-      copyright: "© 2026 Phyto Nova Team. An academic research project.",
+      copyright: "© 2026 NABTA Team. An academic research project.",
     },
   },
   ar: {
@@ -177,92 +216,127 @@ export const translations = {
       toggleMenu: "فتح وإغلاق القائمة",
     },
     nav: [
-      { label: "عن البحث", href: "#about" },
+      { label: "عن NABTA", href: "#about" },
       { label: "مجالات البحث", href: "#research-areas" },
+      { label: "المكونات", href: "#ingredients" },
+      { label: "المنتج", href: "#order" },
+      { label: "فريقنا", href: "#team" },
       { label: "المنشورات", href: "#publications" },
       { label: "المستودع", href: "#repository" },
-      { label: "فريقنا", href: "#team" },
     ],
     navbar: {
       repositoryButton: "مستودع المشروع",
       repositoryButtonMobile: "الدخول إلى مستودع المشروع",
     },
     hero: {
-      label: "فيتو نوفا · أبحاث التكنولوجيا الحيوية النباتية",
-      titleStart: "زراعة الأنسجة النباتية من أجل",
-      titleHighlight: "اكتشاف الأدوية المضادة للسرطان",
+      label: "NABTA · مُحسِّن تربة قائم على مواد حيوية",
+      titleStart: "تربة أفضل.",
+      titleHighlight: "لنموّ أقوى.",
       description:
-        "نستكشف إمكانات التكنولوجيا الحيوية النباتية والتحفيز بالجسيمات النانوية وعلم الأيض (الميتابولوميكس) لدعم اكتشاف المركبات النشطة بيولوجيًا ذات التطبيقات المحتملة المضادة للسرطان.",
-      primaryButton: "استكشف البحث",
-      secondaryButton: "عرض المنشورات",
-      byline: "رحلة علمية بقيادة فريق فيتو نوفا",
-      imageAlt: "زراعة الأنسجة النباتية",
-      imageCaption: "زراعة الأنسجة النباتية · صورة توضيحية",
+        "NABTA مُحسِّن تربة على هيئة أقراص، يجمع بين مواد عضوية ومعدنية وبوليمرات حيوية ميكروبية لمساعدة التربة الرملية على الاحتفاظ بالماء ودعم نمو النباتات.",
+      primaryButton: "اكتشف NABTA",
+      secondaryButton: "تعرّف على المنتج",
+      byline: "حل عملي للتربة يدعم نموًا أكثر استدامة",
+      imageAlt: "أقراص NABTA لتحسين التربة",
+      imageCaption: "NABTA · للتربة الرملية",
       disciplines: [
-        "التكنولوجيا الحيوية النباتية",
-        "التحفيز بالجسيمات النانوية",
-        "الزراعة في المفاعلات الحيوية",
-        "التحليل الأيضي",
+        "احتباس الماء",
+        "بنية التربة",
+        "المواد العضوية",
+        "البوليمرات الميكروبية",
       ],
     },
     overview: {
-      label: "عن البحث",
-      title: "الربط بين التكنولوجيا الحيوية النباتية واكتشاف الأدوية",
+      label: "نبذة عن المشروع",
+      title: "NABTA – أقراص مُحسِّن التربة الحيوي",
       paragraphOne:
-        "يستكشف هذا البحث إمكانات زراعة الأنسجة النباتية كمنصة مبتكرة لاكتشاف وإنتاج المركبات النشطة بيولوجيًا ذات التطبيقات المحتملة المضادة للسرطان.",
+        "NABTA مُحسِّن تربة مبتكر على هيئة أقراص مضغوطة، صُمم خصيصًا لتحسين خصائص التربة الرملية من خلال مزيج متكامل من مواد عضوية ومعدنية وبوليمرات حيوية ميكروبية.",
       paragraphTwo:
-        "من خلال الجمع بين التكنولوجيا الحيوية النباتية والتكنولوجيا النانوية وأنظمة الزراعة المتقدمة والتحليل الأيضي، تدرس الدراسة كيف يمكن تحسين الخلايا النباتية لزيادة إنتاج المركبات الأيضية الثانوية القيّمة.",
+        "يهدف تركيبه إلى رفع قدرة التربة على الاحتفاظ بالماء، وتحسين تكتل حبيباتها وبنيتها، وإثرائها بالمادة العضوية والعناصر الغذائية الأساسية، مما يساعد على تهيئة بيئة أنسب لنمو الجذور والنبات.",
       quote:
-        "زراعة الأنسجة النباتية لاكتشاف الأدوية المضادة للسرطان: رؤى حول التحفيز بالجسيمات النانوية، وإنتاج المركبات الأيضية الثانوية، والتوسع في المفاعلات الحيوية، وعلم الأيض",
-      imageAlt: "زراعة الأنسجة النباتية في المعمل",
-      figureLabel: "01 / الإمكانات الكامنة داخل الخلايا النباتية",
-      figureNote: "صورة معملية توضيحية",
+        "أقراص NABTA سهلة التخزين والنقل والاستخدام. توضع في التربة بالقرب من جذور النبات ثم تُروى، فتتفكك تدريجيًا وتُطلق مكوناتها في التربة المحيطة.",
+      imageAlt: "بادرة صغيرة تنمو في التربة",
+      figureLabel: "تربة أفضل، واحتفاظ أكبر بالماء",
+      figureNote: "ونمو أكثر استدامة",
     },
     areasSection: {
-      label: "نهج متكامل",
-      title: "أربعة مجالات بحثية مترابطة.",
+      label: "أربعة مجالات بحثية متكاملة",
+      title: "أربع طرق لدعم التربة الرملية.",
       description:
-        "من الاستجابات الخلوية إلى البصمات الكيميائية، نستكشف آفاق البحث القائم على النباتات.",
+        "يجمع تركيب NABTA بين احتفاظ التربة بالماء، وتحسين بنيتها، وإضافة المغذيات العضوية، والبوليمرات الحيوية الميكروبية.",
       focusLabel: "محور بحثي",
     },
     areas: [
       {
-        title: "التحفيز بالجسيمات النانوية",
+        title: "احتباس الماء في التربة",
         description:
-          "استكشاف كيف يمكن للمحفزات النانوية أن تنشّط الدفاع النباتي والمسارات الأيضية، مع إمكانية التأثير على تراكم المركبات الأيضية الثانوية.",
+          "دعم قدرة التربة الرملية على الاحتفاظ بالماء والحد من فقده مع الصرف.",
       },
       {
-        title: "إنتاج المركبات الأيضية الثانوية",
+        title: "بنية وتكتل التربة",
         description:
-          "دراسة المركبات النشطة بيولوجيًا المستخلصة من النباتات، والنهج المتبعة لتحسين إنتاج المركبات الأيضية الثانوية القيّمة في الخلايا النباتية المستزرعة.",
+          "دعم تكتل حبيبات التربة واستقرارها لتوفير بيئة أنسب لنمو الجذور.",
       },
       {
-        title: "التوسع في المفاعلات الحيوية",
+        title: "المادة العضوية والمغذيات",
         description:
-          "دراسة الانتقال من المزارع على مستوى المعمل إلى أنظمة زراعة متحكَّم فيها وقابلة للتوسع لإنتاج الخلايا النباتية.",
+          "إضافة مادة عضوية وعناصر غذائية أساسية لدعم نمو النباتات وتحسين جودة التربة.",
       },
       {
-        title: "علم الأيض (الميتابولوميكس)",
+        title: "البوليمرات الحيوية الميكروبية",
         description:
-          "تحليل البصمات الكيميائية المعقدة لفهم المسارات الأيضية بشكل أفضل والتعرف على الجزيئات النشطة بيولوجيًا التي قد تكون مهمة.",
+          "استخدام عديدات السكاريد خارج الخلية (EPS) لدعم تماسك التربة وربط حبيباتها.",
       },
     ],
+    ingredients: {
+      label: "تركيب المنتج",
+      title: "ممّ يتكوّن NABTA؟",
+      description:
+        "مزيج من مواد عضوية ومعدنية وميكروبية، اختير لتطبيقات التربة الرملية.",
+      items: [
+        "كمبوست",
+        "فيرميكوليت",
+        "فحم حيوي زراعي",
+        "بنتونايت",
+        "سماد دواجن مُحوَّل إلى كمبوست",
+        "نشا",
+        "عديدات السكاريد خارج الخلية (EPS)",
+      ],
+      details: [
+        "يضيف مادة عضوية ويدعم الحياة الدقيقة حول الجذور.",
+        "يحتفظ بالماء والعناصر الغذائية ويطلقها تدريجيًا.",
+        "يحسّن قدرة التربة على الاحتفاظ بالماء وتهويتها.",
+        "معدن طيني يساعد التربة الرملية على حفظ الماء وربط الحبيبات.",
+        "مصدر لعناصر غذائية عضوية تدعم نمو النبات.",
+        "مادة رابطة طبيعية تحافظ على تماسك القرص.",
+        "بوليمرات حيوية ميكروبية تدعم ربط الحبيبات واستقرار التربة.",
+      ],
+    },
+    order: {
+      label: "المنتج",
+      title: "أقراص NABTA لكل استخدام",
+      description:
+        "يتوفر NABTA بأحجام مناسبة للنباتات المنزلية وللحقول الكبيرة.",
+      typeLabel: "نوع الاستخدام",
+      sizeLabel: "حجم العبوة",
+      home: "نباتات منزلية",
+      field: "حقول كبيرة",
+      button: "اطلب عبر واتساب",
+      productAlt: "أقراص NABTA لتحسين التربة بمواد حيوية",
+    },
     publicationsSection: {
       label: "الأساس العلمي",
       title: "المنشورات البحثية والمراجع العلمية",
-      description: "استكشف الأدبيات العلمية التي تشكّل منظورنا البحثي.",
+      description:
+        "اطّلع على الأبحاث والمراجع العلمية التي يستند إليها نهج NABTA في تحسين التربة الرملية.",
       reference: "مرجع",
       readPublication: "قراءة المنشور",
     },
     publicationSummaries: {
-      "nano-elicitation-plant-cell-cultures":
-        "مراجعة لنُهج التحفيز بالجسيمات النانوية لزيادة إنتاج المركبات الأيضية الثانوية في مزارع الخلايا النباتية الطبية.",
-      "viola-odorata-fed-batch-cultivation":
-        "تتناول النمذجة الرياضية واستراتيجيات التغذية بالعناصر الغذائية لزراعة خلايا نبات البنفسج (Viola odorata) في المفاعلات الحيوية، إلى جانب تحليل المستخلصات الناتجة.",
-      "paclobutrazol-rice-water-deficit":
-        "تبحث في الاستجابات الفسيولوجية والكيميائية الحيوية والجزيئية لمعاملة الأرز بالباكلوبيوترازول تحت إجهاد نقص المياه.",
-      "plant-cell-tissue-organ-culture-metabolites":
-        "تستعرض نُهج زراعة الخلايا والأنسجة والأعضاء النباتية لإنتاج المركبات الأيضية بشكل مستدام، بما في ذلك تقنيات المفاعلات الحيوية والتحليل الأيضي.",
+      "eps-soil-conditioning":
+        "دليل علمي لاستخدام السكريات الخارجية الميكروبية ودورها في المواد البوليميرية الحيوية للتربة والبيئة.",
+      "soil-water-retention":
+        "أبحاث تدعم تحسين سلوك ماء التربة وتطبيقات البوليمرات الحيوية الميكروبية للمحافظة على التربة.",
     },
     errorPage: {
       eyebrow: "الصفحة غير موجودة",
@@ -282,13 +356,13 @@ export const translations = {
     supervisor: {
       label: "الإشراف الأكاديمي",
       title: "تحت إشراف",
-      name: "Prof. Dr. Said Soliman",
-      role: "الرئيس السابق لقسم الوراثة\nكلية الزراعة، جامعة الزقازيق",
-      distinction: "مبتكر أرز عرابي",
+      name: "أ.د. سارة فودة",
+      role: "أستاذة قسم علوم الأراضي\nكلية الزراعة، جامعة الزقازيق",
+      distinction: "",
     },
     presentation: {
       label: "المقدّمون",
-      title: "عرض فريق فيتو نوفا",
+      title: "عرض فريق NABTA",
       presentedBy: "تقديم",
       showDetails: "عرض تفاصيل",
       hideDetails: "إخفاء تفاصيل",
@@ -300,20 +374,20 @@ export const translations = {
       role: "مطوّر واجهات",
       handle: "@Elwasify",
       name: "م. عبد الله الوصيفي",
-      description: "تصميم وتطوير موقع Phyto Nova.",
+      description: "تصميم وتطوير موقع NABTA.",
       socialLabel: "التواصل الاجتماعي",
     },
     team: {
-      label: "الأشخاص وراء المشروع",
-      title: "تعرّف على فريق فيتو نوفا",
+      label: "الأشخاص وراء NABTA",
+      title: "تعرّف على فريق NABTA",
       description:
-        "فضول مشترك. نهج تعاوني. منظور جديد للتكنولوجيا الحيوية النباتية.",
+        "فريق تعاوني يعمل على تحسين جودة التربة ودعم النمو المستدام.",
     },
     rating: {
       label: "شاركنا رأيك",
       title: "قيّم الفكرة البحثية وشاركنا مقترحاتك",
       description:
-        "رأيك العلمي يساعدنا على تطوير فيتو نوفا. قيّم فكرة البحث وقل لنا ما تراه.",
+        "رأيك يساعدنا على تطوير NABTA. قيّم المشروع وشاركنا مقترحاتك.",
       ratingLabel: "كيف تقيّم فكرة البحث؟",
       typeLabel: "نوع المشاركة",
       types: {
@@ -326,18 +400,24 @@ export const translations = {
       emailPlaceholder: "بريدك الإلكتروني (اختياري، لو تحب أن نرد عليك)",
       submit: "إرسال",
       sending: "جاري الإرسال...",
-      thanks: "شكرًا لك! مشاركتك قيّمة لفريق فيتو نوفا. 🌿",
+      thanks: "شكرًا لك! مشاركتك قيّمة لفريق NABTA. 🌿",
       error: "حصلت مشكلة، جرب تاني.",
       star: "نجوم",
       submitAnother: "إرسال مشاركة أخرى",
     },
     footer: {
+      taglineStart: "تربة أفضل،",
+      taglineHighlight: "نمو أقوى",
       description:
-        "نستكشف نقطة التقاء التكنولوجيا الحيوية النباتية واكتشاف الأدوية من خلال البحث العلمي والتعاون.",
+        "مُحسِّن تربة قائم على مواد حيوية، يهدف إلى دعم التربة الرملية ونمو النباتات بصورة أكثر استدامة.",
       repository: "مستودع المشروع",
+      quickLinks: "روابط سريعة",
+      contactUs: "تواصل معنا",
+      followUs: "تابعنا",
+      location: "كلية الزراعة، جامعة الزقازيق",
       backToTop: "العودة للأعلى",
       socialAccountPrefix: "حساب محمد فؤاد على",
-      copyright: "© 2026 فريق فيتو نوفا. مشروع بحثي أكاديمي.",
+      copyright: "© 2026 فريق NABTA. مشروع بحثي أكاديمي.",
     },
   },
 };

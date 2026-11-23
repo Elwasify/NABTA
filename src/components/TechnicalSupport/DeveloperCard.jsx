@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 import styled from "styled-components";
-import photo from "../../assets/FullSizeRender.jpeg";
+import photo from "../../assets/abdallah-elwasify.webp";
 import { useLanguage } from "../../context/useLanguage";
 
 const socialLinks = [
@@ -80,18 +80,18 @@ const StyledWrapper = styled.div`
   justify-content: center;
 
   .card {
-    width: min(100%, 260px);
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    width: min(100%, 280px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 20px;
     padding: 7px;
     overflow: hidden;
-    background: var(--color-surface-dark);
-    box-shadow: 0 16px 36px rgba(15, 43, 54, 0.28);
+    background: var(--color-forest-900);
+    box-shadow: 0 14px 30px rgba(53, 91, 61, 0.18);
     transition: box-shadow 0.3s ease;
   }
 
   .card:hover {
-    box-shadow: 0 22px 46px rgba(15, 43, 54, 0.38);
+    box-shadow: 0 20px 40px rgba(53, 91, 61, 0.24);
   }
 
   .top-section {
@@ -142,9 +142,9 @@ const StyledWrapper = styled.div`
     width: 100%;
     gap: 8px;
     padding: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 16px;
-    background: var(--color-surface-dark);
+    background: rgba(255, 255, 255, 0.05);
   }
 
   .social-link {
@@ -154,10 +154,10 @@ const StyledWrapper = styled.div`
     justify-content: center;
     min-width: 0;
     height: 44px;
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 12px;
-    background: rgba(255, 255, 255, 0.08);
-    color: var(--color-forest-300);
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
     transition:
       background-color 0.2s ease,
       color 0.2s ease,
@@ -184,6 +184,7 @@ const StyledWrapper = styled.div`
       transition: none;
     }
 
+    .card:hover,
     .social-link:hover {
       transform: none;
     }

@@ -224,6 +224,23 @@ main > section.surface-order {
   mask-image: linear-gradient(115deg, #000, transparent 76%);
 }
 
+.repository-section {
+  background:
+    linear-gradient(110deg, rgb(10 32 21 / 82%), rgb(13 39 25 / 68%)),
+    url("/nabta-repository-bg.webp") center 58% / cover no-repeat;
+}
+
+.repository-section::after {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    radial-gradient(circle at 15% 20%, rgb(182 231 95 / 12%), transparent 22rem),
+    linear-gradient(180deg, rgb(10 32 21 / 8%), rgb(10 32 21 / 38%));
+}
+
 .hero-stage {
   position: relative;
   isolation: isolate;

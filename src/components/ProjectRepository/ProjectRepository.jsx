@@ -8,7 +8,7 @@ export default function ProjectRepository() {
   return (
     <section
       id="repository"
-      className="surface surface-cta relative overflow-hidden py-12 text-white sm:py-16 md:py-20 lg:py-24"
+      className="repository-section surface relative overflow-hidden py-12 text-white sm:py-16 md:py-20 lg:py-24"
     >
       <div
         aria-hidden="true"

@@ -20,7 +20,7 @@ export default function Rating() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState(() => {
     try {
-      return window.localStorage.getItem("phytonova_feedback")
+      return window.localStorage.getItem("nabta_feedback")
         ? "done"
         : "idle";
     } catch {
@@ -28,6 +28,14 @@ export default function Rating() {
     }
   });
   const [honeypot, setHoneypot] = useState("");
+
+  const ratingLabels = {
+    5: { en: "Excellent 🌿", ar: "ممتاز 🌿" },
+    4: { en: "Very Good ✨", ar: "جيد جداً ✨" },
+    3: { en: "Good 👍", ar: "جيد 👍" },
+    2: { en: "Fair", ar: "مقبول" },
+    1: { en: "Needs Improvement", ar: "يحتاج تحسين" },
+  };
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -59,7 +67,7 @@ export default function Rating() {
       const data = await res.json();
       if (data.success) {
         try {
-          localStorage.setItem("phytonova_feedback", "1");
+          localStorage.setItem("nabta_feedback", "1");
         } catch {
           setStatus("done");
           return;
@@ -74,6 +82,11 @@ export default function Rating() {
   }
 
   function handleReset() {
+    try {
+      localStorage.removeItem("nabta_feedback");
+    } catch {
+      // ignore
+    }
     setStatus("idle");
     setRating(0);
     setHover(0);
@@ -179,6 +192,11 @@ export default function Rating() {
                     </button>
                   ))}
                 </div>
+                {(hover || rating) > 0 && (
+                  <p className="mt-1 text-xs font-semibold text-forest-800">
+                    {ratingLabels[hover || rating]?.[document.documentElement.lang === "ar" ? "ar" : "en"]}
+                  </p>
+                )}
               </div>
 
               <div>

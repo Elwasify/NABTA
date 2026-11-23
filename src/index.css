@@ -1,35 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..700&family=Libre+Caslon+Display&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --color-navy-950: #15332a;
-  --color-navy-900: #1e4b37;
-  --color-navy-800: #336747;
-  --color-navy-700: #64895a;
+  --color-navy-950: #0f2b1d;
+  --color-navy-900: #173d2a;
+  --color-navy-800: #26593b;
+  --color-navy-700: #497e59;
 
-  --color-forest-950: #1f4431;
-  --color-forest-900: #355b3d;
-  --color-forest-800: #466545;
-  --color-forest-700: #547646;
-  --color-forest-300: #c7d9b1;
+  --color-forest-950: #0e271a;
+  --color-forest-900: #163f2b;
+  --color-forest-800: #255d3c;
+  --color-forest-700: #3a7550;
+  --color-forest-300: #b5d7b3;
   --color-nabta-lime: #b6e75f;
-  --color-nabta-lime-soft: #eef7d9;
+  --color-nabta-lime-soft: #edf6df;
 
-  --color-mist-50: #f8f9f4;
-  --color-mist-100: #eef2e7;
-  --color-mist-200: #dce6d2;
-  --color-mist-300: #c6d5b9;
+  --color-mist-50: #fbfdf9;
+  --color-mist-100: #f1f6ec;
+  --color-mist-200: #e2ecdb;
+  --color-mist-300: #c8d9be;
 
-  --color-surface-base: #fcfcf8;
-  --color-surface-alt: #f3f6ec;
-  --color-surface-dark: #17392b;
+  --color-surface-base: #ffffff;
+  --color-surface-alt: #f5f8f1;
+  --color-surface-dark: #123424;
 
-  --color-sky-soft: #e4edd8;
+  --color-sky-soft: #e2ecdb;
   --color-paper: var(--color-surface-base);
-  --color-stone-soft: #e4edd8;
-  --color-ink: #27372b;
-  --color-ink-soft: #667263;
-  --color-line: #dfe6d9;
+  --color-stone-soft: #e2ecdb;
+  --color-ink: #1b2d21;
+  --color-ink-soft: #5b6d5f;
+  --color-line: #dee7d8;
 
   --font-display: "DM Sans", system-ui, sans-serif;
   --font-body: "DM Sans", system-ui, sans-serif;
@@ -92,42 +92,14 @@
   letter-spacing: -0.02em;
 }
 
-/* Keep the hero and fixed navigation palette intact; give the content below it
-   a clearer, brighter NABTA palette with consistent contrast. */
-main > section:not(:first-child) {
-  --color-navy-950: #102b1f;
-  --color-navy-900: #173d2b;
-  --color-navy-800: #2e6039;
-  --color-navy-700: #63894b;
-
-  --color-forest-950: #102b1f;
-  --color-forest-900: #1a482d;
-  --color-forest-800: #2d623b;
-  --color-forest-700: #56823f;
-  --color-forest-300: #b8d2b2;
-  --color-nabta-lime: #a9c98f;
-  --color-nabta-lime-soft: #edf4e7;
-
-  --color-mist-50: #fcfdf9;
-  --color-mist-100: #f0f4e8;
-  --color-mist-200: #e1e9d7;
-  --color-mist-300: #cbd9bc;
-
-  --color-surface-base: #ffffff;
-  --color-surface-alt: #f1f5ea;
-  --color-surface-dark: #143a29;
-  --color-ink: #26382d;
-  --color-ink-soft: #647267;
-  --color-line: #dce5d4;
-}
-
+/* Modern polished shadow and border styling for content cards */
 .surface-content article {
   border-color: var(--color-line);
-  box-shadow: 0 10px 30px rgb(31 68 49 / 5%);
+  box-shadow: 0 4px 20px -2px rgb(14 39 26 / 5%), 0 2px 6px -1px rgb(14 39 26 / 3%);
 }
 
 .surface-content article:hover {
-  box-shadow: 0 16px 36px rgb(31 68 49 / 10%);
+  box-shadow: 0 20px 35px -5px rgb(14 39 26 / 10%), 0 8px 16px -3px rgb(14 39 26 / 6%);
 }
 
 .surface-intro,
@@ -355,22 +327,80 @@ html[lang="ar"] h1,
 html[lang="ar"] h2,
 html[lang="ar"] h3,
 html[lang="ar"] h4,
+html[lang="ar"] p,
+html[lang="ar"] span,
+html[lang="ar"] a,
+html[lang="ar"] button,
+html[lang="ar"] input,
+html[lang="ar"] textarea,
 html[lang="ar"] .font-display,
 html[lang="ar"] .font-body {
   font-family: "Cairo", system-ui, sans-serif;
 }
 
+html[lang="ar"] h1 {
+  line-height: 1.2 !important;
+}
+
+html[lang="ar"] h2 {
+  line-height: 1.28 !important;
+}
+
+html[lang="ar"] h3 {
+  line-height: 1.35 !important;
+}
+
+html[lang="ar"] .font-accent {
+  font-family: "Cairo", system-ui, sans-serif;
+  font-style: normal !important;
+  font-weight: 700 !important;
+}
+
 html[lang="ar"] [class*="tracking-"] {
-  letter-spacing: normal;
+  letter-spacing: normal !important;
 }
 
 html[lang="ar"] .surface-content :is(h2, h3) {
-  letter-spacing: normal;
+  letter-spacing: normal !important;
 }
 
 html[lang="ar"] .section-kicker {
   font-size: 0.8rem;
-  letter-spacing: normal;
+  letter-spacing: normal !important;
+}
+
+/* Reading Progress Bar */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-nabta-lime), #84cc16, var(--color-forest-700));
+  transform-origin: 0% 50%;
+  z-index: 70;
+  pointer-events: none;
+  transition: transform 120ms ease-out;
+}
+
+html[dir="rtl"] .scroll-progress-bar {
+  transform-origin: 100% 50%;
+}
+
+/* Transparent Navigation at top of page */
+.nav-glass-hero {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-glass-scrolled {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--color-line);
+  box-shadow: 0 4px 25px -4px rgba(18, 52, 36, 0.08);
 }
 
 html.has-scroll-reveal [data-reveal] {

@@ -35,7 +35,7 @@ export default function Footer() {
           </p>
           <a
             href="#order"
-            className="mt-6 inline-flex min-h-12 items-center gap-2 rounded-full bg-forest-900 px-6 py-3 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-forest-950 hover:shadow-lg hover:shadow-forest-950/20"
+            className="mt-6 inline-flex min-h-12 items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-forest-950 shadow-lg shadow-black/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-mist-100 hover:shadow-xl"
           >
             <Icon icon="ph:package-duotone" width={20} height={20} />
             {t.hero.secondaryButton}

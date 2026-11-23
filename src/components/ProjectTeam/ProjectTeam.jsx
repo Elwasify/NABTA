@@ -35,27 +35,27 @@ export default function ProjectTeam() {
           className="mt-8 flex flex-wrap justify-center gap-3 sm:mt-12 sm:gap-4 xl:gap-5"
           data-reveal="stagger"
         >
-          {teamMembers.map((member, index) => (
-            <article
-              key={member}
-              className="group min-w-0 basis-full rounded-2xl border border-line bg-white/95 p-4 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-forest-700/35 hover:shadow-xl hover:shadow-navy-950/8 sm:basis-[calc(50%-0.5rem)] sm:p-5 lg:basis-[calc(25%-0.75rem)] lg:p-6 xl:basis-[calc(25%-0.95rem)]"
-            >
-              <div className="flex items-center justify-between">
-                <p className="rounded-md bg-mist-100/70 px-2 py-0.5 text-[11px] font-semibold tracking-[0.2em] text-forest-800">
-                  {String(index + 1).padStart(2, "0")}
-                </p>
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-linear-to-br from-nabta-lime-soft to-white text-forest-900 ring-1 ring-forest-700/10 transition-all duration-300 group-hover:scale-105 group-hover:bg-forest-900 group-hover:from-forest-900 group-hover:to-forest-900 group-hover:text-white">
-                  <Icon icon="ph:user-duotone" width={24} height={24} />
-                </span>
-              </div>
-              <h3
-                dir="ltr"
-                className="mt-4 text-start font-display text-lg font-medium leading-snug text-navy-900"
+          {teamMembers.map((member, index) => {
+            const localizedName = t.team.members?.[index] || member;
+            return (
+              <article
+                key={member}
+                className="group min-w-0 basis-full rounded-2xl border border-line bg-white/95 p-4.5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-forest-700/35 hover:shadow-xl hover:shadow-forest-950/8 sm:basis-[calc(50%-0.5rem)] sm:p-5 lg:basis-[calc(25%-0.75rem)] lg:p-6 xl:basis-[calc(25%-0.95rem)]"
               >
-                {member}
-              </h3>
-            </article>
-          ))}
+                <div className="flex items-center justify-between">
+                  <p className="rounded-md bg-mist-100/80 px-2 py-0.5 text-[11px] font-semibold tracking-wider text-forest-800">
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-linear-to-br from-nabta-lime-soft to-white text-forest-900 ring-1 ring-forest-700/10 transition-all duration-300 group-hover:scale-105 group-hover:bg-forest-900 group-hover:from-forest-900 group-hover:to-forest-900 group-hover:text-white">
+                    <Icon icon="ph:user-duotone" width={24} height={24} />
+                  </span>
+                </div>
+                <h3 className="mt-4 text-start font-display text-base font-bold leading-snug text-navy-900 sm:text-lg">
+                  {localizedName}
+                </h3>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

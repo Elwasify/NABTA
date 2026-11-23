@@ -171,6 +171,20 @@ export const translations = {
       title: "Meet the NABTA Team",
       description:
         "A collaborative team working to improve soil quality and support sustainable growth.",
+      members: [
+        "Mohamed Fouad",
+        "Shimaa Tawfiq",
+        "Ahmed Ehab",
+        "Hagar Waled",
+        "Fatma Yasser",
+        "Marim Osama",
+        "Shorouk Mohamed",
+        "Reham Abdelwahab",
+        "Mohammed Abd Elfatah",
+        "Ahmed Atta",
+        "Takla Nabil",
+        "Nada Mohammed",
+      ],
     },
     rating: {
       label: "Join the Conversation",
@@ -321,7 +335,6 @@ export const translations = {
       sizeLabel: "حجم العبوة",
       home: "نباتات منزلية",
       field: "حقول كبيرة",
-      button: "اطلب عبر واتساب",
       productAlt: "أقراص NABTA لتحسين التربة بمواد حيوية",
     },
     publicationsSection: {
@@ -382,6 +395,20 @@ export const translations = {
       title: "تعرّف على فريق NABTA",
       description:
         "فريق تعاوني يعمل على تحسين جودة التربة ودعم النمو المستدام.",
+      members: [
+        "محمد فؤاد",
+        "شيماء توفيق",
+        "أحمد إيهاب",
+        "هاجر وليد",
+        "فاطمة ياسر",
+        "مريم أسامة",
+        "شروق محمد",
+        "ريهام عبد الوهاب",
+        "محمد عبد الفتاح",
+        "أحمد عطا",
+        "تقلا نبيل",
+        "ندى محمد",
+      ],
     },
     rating: {
       label: "شاركنا رأيك",

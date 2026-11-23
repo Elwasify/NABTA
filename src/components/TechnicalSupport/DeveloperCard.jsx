@@ -1,5 +1,4 @@
 import { Icon } from "@iconify/react";
-import styled from "styled-components";
 import photo from "../../assets/abdallah-elwasify.webp";
 import { useLanguage } from "../../context/useLanguage";
 
@@ -30,163 +29,49 @@ export default function DeveloperCard() {
   const { t } = useLanguage();
 
   return (
-    <StyledWrapper>
-      <div className="card">
-        <div className="top-section">
+    <div className="flex w-full items-center justify-center">
+      <article className="w-full max-w-[280px] overflow-hidden rounded-3xl border border-line bg-white shadow-lg shadow-forest-950/5 transition-all duration-300 hover:-translate-y-1 hover:border-forest-700/35 hover:shadow-xl">
+        <div className="relative aspect-[3/3.8] w-full overflow-hidden bg-mist-100">
           <img
             src={photo}
             alt={t.technicalSupport.name}
-            className="user-photo"
+            className="h-full w-full object-cover object-top select-none pointer-events-none"
             loading="lazy"
             decoding="async"
           />
         </div>
-        <div className="bottom-section">
-          <span className="title" dir="auto">
-            {t.technicalSupport.name}
-          </span>
-          <p className="subtitle" dir="auto">
-            {t.technicalSupport.role}
-          </p>
+
+        <div className="flex flex-col justify-between p-5 text-center">
+          <div>
+            <h3 className="font-display text-base font-bold text-navy-900 sm:text-lg">
+              {t.technicalSupport.name}
+            </h3>
+            <p className="mt-1 text-xs font-semibold text-forest-700 sm:text-sm">
+              {t.technicalSupport.role}
+            </p>
+          </div>
+
+          <div
+            className="mt-4 flex items-center justify-center gap-2 border-t border-line/70 pt-3.5"
+            dir="ltr"
+            role="group"
+            aria-label={t.technicalSupport.socialLabel}
+          >
+            {socialLinks.map(({ label, href, icon }) => (
+              <a
+                key={label}
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-forest-700/15 bg-mist-50 text-forest-800 transition-all duration-200 hover:scale-110 hover:border-forest-900 hover:bg-forest-900 hover:text-white"
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+              >
+                <Icon icon={icon} width={18} height={18} aria-hidden="true" />
+              </a>
+            ))}
+          </div>
         </div>
-        <div
-          className="social-panel"
-          role="group"
-          aria-label={t.technicalSupport.socialLabel}
-          dir="ltr"
-        >
-          {socialLinks.map(({ label, href, icon }) => (
-            <a
-              key={label}
-              className="social-link"
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={label}
-            >
-              <Icon icon={icon} width={22} height={22} aria-hidden="true" />
-            </a>
-          ))}
-        </div>
-      </div>
-    </StyledWrapper>
+      </article>
+    </div>
   );
 }
-
-const StyledWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .card {
-    width: min(100%, 280px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 20px;
-    padding: 7px;
-    overflow: hidden;
-    background: var(--color-forest-900);
-    box-shadow: 0 14px 30px rgba(53, 91, 61, 0.18);
-    transition: box-shadow 0.3s ease;
-  }
-
-  .card:hover {
-    box-shadow: 0 20px 40px rgba(53, 91, 61, 0.24);
-  }
-
-  .top-section {
-    position: relative;
-    height: 280px;
-    overflow: hidden;
-    border-radius: 13px;
-    background: var(--color-surface-base);
-  }
-
-  .user-photo {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-    object-fit: cover;
-    object-position: center 55%;
-    transform: scale(1.55);
-  }
-
-  .bottom-section {
-    padding: 10px 8px 8px;
-    text-align: center;
-  }
-
-  .title {
-    display: block;
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-  }
-
-  .subtitle {
-    margin: 3px 0 0;
-    color: var(--color-forest-300);
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-  }
-
-  .social-panel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 8px;
-    padding: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.05);
-  }
-
-  .social-link {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-    min-width: 0;
-    height: 44px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.12);
-    color: #ffffff;
-    transition:
-      background-color 0.2s ease,
-      color 0.2s ease,
-      transform 0.2s ease,
-      box-shadow 0.2s ease;
-  }
-
-  .social-link:hover,
-  .social-link:focus-visible {
-    transform: translateY(-2px);
-    background: var(--color-forest-700);
-    color: #ffffff;
-    box-shadow: 0 8px 16px rgba(15, 43, 54, 0.28);
-  }
-
-  .social-link:focus-visible {
-    outline: 2px solid #ffffff;
-    outline-offset: 3px;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .card,
-    .social-link {
-      transition: none;
-    }
-
-    .card:hover,
-    .social-link:hover {
-      transform: none;
-    }
-  }
-`;

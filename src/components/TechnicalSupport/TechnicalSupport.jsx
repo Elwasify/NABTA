@@ -7,7 +7,7 @@ export default function TechnicalSupport() {
   return (
     <section
       id="technical-support"
-      className="surface surface-team relative overflow-hidden border-t-2 border-forest-700/25 py-12 sm:py-16 md:py-20 lg:py-24"
+      className="surface surface-team relative overflow-hidden border-t border-line py-12 sm:py-16 md:py-20 lg:py-24"
     >
       <div
         aria-hidden="true"

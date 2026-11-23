@@ -31,11 +31,11 @@ export default function DeveloperCard() {
   return (
     <div className="flex w-full items-center justify-center">
       <article className="w-full max-w-[280px] overflow-hidden rounded-3xl border border-line bg-white shadow-lg shadow-forest-950/5 transition-all duration-300 hover:-translate-y-1 hover:border-forest-700/35 hover:shadow-xl">
-        <div className="relative aspect-[3/3.8] w-full overflow-hidden bg-mist-100">
+        <div className="relative aspect-[3/3.8] w-full overflow-hidden bg-transparent">
           <img
             src={photo}
             alt={t.technicalSupport.name}
-            className="h-full w-full object-cover object-top select-none pointer-events-none"
+            className="h-full w-full object-contain object-top select-none pointer-events-none"
             loading="lazy"
             decoding="async"
           />

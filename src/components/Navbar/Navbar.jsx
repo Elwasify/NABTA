@@ -56,8 +56,8 @@ export default function Navbar({ overlay = false }) {
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
           open
             ? light
-              ? "border-b border-white/10 bg-forest-950/40 backdrop-blur-2xl text-white"
-              : "border-b border-line bg-white/75 backdrop-blur-2xl text-ink shadow-lg"
+              ? "border-b border-transparent bg-transparent backdrop-blur-md text-white"
+              : "border-b border-transparent bg-transparent backdrop-blur-md text-ink"
             : light
               ? "nav-glass-hero text-white"
               : "nav-glass-scrolled text-ink"
@@ -140,10 +140,10 @@ export default function Navbar({ overlay = false }) {
 
         {open && (
           <div
-            className={`max-h-[calc(100dvh-4rem)] overflow-y-auto border-t xl:hidden backdrop-blur-2xl transition-all duration-300 ${
+            className={`max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-transparent bg-transparent xl:hidden backdrop-blur-md transition-all duration-300 ${
               light
-                ? "border-white/10 bg-forest-950/40 text-white shadow-2xl"
-                : "border-line bg-white/75 text-ink shadow-2xl"
+                ? "text-white"
+                : "text-ink"
             }`}
           >
             <nav
